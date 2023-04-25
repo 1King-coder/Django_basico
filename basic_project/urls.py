@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+def response_blog (request):
+    print('can do other things')
+    return HttpResponse('A test Message')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('test/', response_blog)
 ]
